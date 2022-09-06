@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/dashboard"><img src="../../../assets/imgs/tam_gobmx.png" alt="" width="100px"></button>
+  <button mat-button routerLink="/dashboard">Inicio</button>
+  <!--<button *ngIf="usuario.admin" mat-button routerLink="/config">Datos</button> -->
+  <button mat-button routerLink="/config">Datos</button>
+  <span class="espacio"></span>
+  <button (click)="detalles_usuario()" mat-icon-button matTooltip="Ver datos de la cuenta">
+      <mat-icon>account_circle</mat-icon>
+  </button>
+  <button (click)="logout()" mat-icon-button matTooltip="Cerrar sesion">
+      <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
