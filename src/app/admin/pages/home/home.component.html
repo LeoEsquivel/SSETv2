@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<mat-drawer-container class="confic-container" autosize>
+
+  <!--SIDENAV-->
+  <mat-drawer mode="side" opened>
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+
+  <!--Contenido-->
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+
+</mat-drawer-container>
