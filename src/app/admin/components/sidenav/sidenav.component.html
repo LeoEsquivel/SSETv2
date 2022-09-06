@@ -1,0 +1,13 @@
+<mat-selection-list #items [multiple]="false">
+
+  <mat-list-option *ngFor="let item of lista">
+
+    <a routerLink="{{item.link}}">
+      <mat-list-option [value]="item.nombre">
+        {{ item.nombre }}
+      </mat-list-option>
+    </a>
+
+  </mat-list-option>
+
+</mat-selection-list>

@@ -1,0 +1,19 @@
+.sidebar {
+  min-width: 15%;
+  text-align: left;
+}
+
+.sidebar-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+mat-form-field {
+  margin: 5px;
+}
