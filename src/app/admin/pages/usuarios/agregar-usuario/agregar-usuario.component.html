@@ -1,0 +1,68 @@
+<div mat-dialog-title>Registro de nuevo usuario</div>
+<div mat-dialog-content>
+
+  <form class="form"
+        [formGroup]="usuarioForm">
+
+      <mat-form-field class="full-width">
+        <mat-label>Correo</mat-label>
+        <input matInput
+               type="email"
+               formControlName="email"
+               placeholder="set@gmail.com"
+               autocomplete="off">
+      </mat-form-field> <br>
+
+      <mat-form-field class="full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput
+                 type="password"
+                 #input
+                 minlength="6"
+                 formControlName="password"
+                 autocomplete="new-password">
+          <mat-hint align="end">Minimo 6 caracteres {{input.value.length || 0}}/6</mat-hint>
+      </mat-form-field> <br>
+
+      <mat-form-field class="full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput
+                 formControlName="nombre"
+                 placeholder="Leonardo"
+                 autocomplete="off">
+      </mat-form-field> <br>
+
+      <mat-form-field class="full-width">
+          <mat-label>Apellido paterno</mat-label>
+          <input matInput
+                 formControlName="apellidoP"
+                 placeholder="Esquivel"
+                 autocomplete="off">
+      </mat-form-field> <br>
+
+      <mat-form-field class="full-width">
+          <mat-label>Apellido materno</mat-label>
+          <input matInput
+                 formControlName="apellidoM"
+                 placeholder="Díaz"
+                 autocomplete="off">
+      </mat-form-field> <br>
+
+      <mat-slide-toggle formControlName="admin">Administrador</mat-slide-toggle> <br>
+
+      <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Niveles Educativos</mat-label>
+          <mat-select formControlName="niveles_educativos" multiple>
+            <mat-option *ngFor="let nivel of nivelesEducativos"
+                        [value]="nivel.id">
+              {{nivel.nivel_educativo}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-content>
+  <button mat-button (click)="onClickNo()">Cancelar</button>
+  <button mat-button (click)="guardar()">Guardar</button>
+</div>
