@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.edit_button {
+  color: #FFC107;
+}
+
+mat-icon:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.7)
+}
+
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.full-width {
+    width: 100%;
+  }
+
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 5px;
+  }
+
+.espacio {
+  flex: 1 1 auto;
+}
+
+table {
+    width: 95%;
+}
+
+th {
+    text-align: center !important;
+    color: black;
+  }
+
+td {
+    text-align: center !important;
+  }
+
+.mat-dialog-actions {
+    justify-content: center;
+}
+
+.mat-dialog-content {
+    justify-content: center;
+}
