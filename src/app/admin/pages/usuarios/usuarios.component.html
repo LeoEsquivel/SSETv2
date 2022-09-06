@@ -1,0 +1,19 @@
+<div class="container">
+
+  <mat-toolbar>
+    <span>Usuarios</span>
+    <div class="espacio"></div>
+    <button mat-raised-button
+            color="primary"
+            (click)="registro()">
+            Registrar usuario
+    </button>
+  </mat-toolbar> <br>
+
+  <div class="mat-elevation-z8">
+    <app-usuario-tabla
+      [data]="usuarios"
+    ></app-usuario-tabla>
+  </div>
+
+</div>
