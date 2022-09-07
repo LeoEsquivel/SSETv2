@@ -9,7 +9,7 @@ import { MaterialModule } from '../material/material.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CiclosEscolaresComponent } from './pages/ciclos-escolares/ciclos-escolares.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
-import { UsuarioTablaComponent } from './components/usuario-tabla/usuario-tabla.component';
+import { UsuarioTablaComponent } from './pages/usuarios/usuario-tabla/usuario-tabla.component';
 import { DictamenesComponent } from './pages/dictamenes/dictamenes.component';
 import { ModelosComponent } from './pages/modelos/modelos.component';
 import { MotivosComponent } from './pages/motivos/motivos.component';
