@@ -16,7 +16,18 @@ export class UsuariosComponent implements OnInit {
       apellidoP: 'Esquivel',
       apellidoM: 'Diaz',
       email: 'prueba1@test.com',
-      admin: true
+      admin: true,
+      contrasena: '123456',
+      niveles_educativos: [
+        {
+          id: 1,
+          nivel_educativo: 'Primaria'
+        },
+        {
+          id: 2,
+          nivel_educativo: 'Elemental'
+        }
+      ]
     }
   ]
   constructor( private _dialog: MatDialog ) { }
@@ -28,6 +39,9 @@ export class UsuariosComponent implements OnInit {
     const dialogRef = this._dialog.open( AgregarUsuarioComponent, {} );
     dialogRef.afterClosed().subscribe({
       next: res => {
+        if (!res.data) {
+          return
+        }
         alert( res )
       }
     } )
